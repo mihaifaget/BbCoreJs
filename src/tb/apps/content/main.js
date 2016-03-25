@@ -32,6 +32,7 @@ require.config({
         'revision.repository': 'src/tb/apps/content/repository/revision.repository',
         'resource.repository': 'src/tb/apps/content/repository/resource.repository',
         'keyword.repository': 'src/tb/apps/content/repository/keyword.repository',
+        'crop.repository': 'src/tb/apps/content/repository/crop.repository',
 
         //DataStore
         'media.datastore': 'src/tb/component/medialibrary/datastore/media.datastore',

@@ -25,11 +25,12 @@ define(
         'BackBone',
         'jquery',
         'component!translator',
+        'component!imagecropper',
         'tb.component/mask/main',
         'component!session',
         'component!notify'
     ],
-    function (Core, Renderer, Backbone, jQuery, Translator) {
+    function (Core, Renderer, Backbone, jQuery, Translator, Cropper) {
         'use strict';
 
         var FileView = Backbone.View.extend({
@@ -49,9 +50,32 @@ define(
                 this.form = formTag;
                 this.template = template;
                 this.element = element;
+                this.crop_button_class = 'btn-crop';
                 this.maskManager = require('tb.component/mask/main').createMask({'message': Translator.translate('uploading')});
 
                 this.uploadEvent();
+                this.cropEvent();
+            },
+
+            cropEvent: function () {
+                var imageUid = '';
+
+                if (this.element.config && this.element.config.element && this.element.config.element.uid) {
+                    imageUid = this.element.config.element.uid;
+                }
+
+                Core.Mediator.subscribe('on:form:render', function (form) {
+                    form.find('.btn-crop').unbind('click').on('click', function () {
+                        if (form.find('.dz-preview').length === 0) {
+                            require('component!notify').error(Translator.translate('no_image_to_crop'));
+                        } else if (form.find('input[name=image]').val() === 'updated') {
+                            require('component!notify').error(Translator.translate('save_image_first'));
+                        } else {
+                            this.cropper = Cropper.create();
+                            this.cropper.show(imageUid);
+                        }
+                    });
+                });
             },
 
             uploadEvent: function () {

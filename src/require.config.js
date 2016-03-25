@@ -97,7 +97,8 @@ require.config({
         'jssimplepagination': 'bower_components/jssimplepagination/jquery.simplePagination',
 
         'cryptojs.core': 'bower_components/cryptojslib/components/core',
-        'cryptojs.md5': 'bower_components/cryptojslib/components/md5'
+        'cryptojs.md5': 'bower_components/cryptojslib/components/md5',
+        'cropper': 'bower_components/cropper/dist/cropper'
     },
     'map': {
         "*": {

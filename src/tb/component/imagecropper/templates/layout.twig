@@ -1,0 +1,31 @@
+<div class="center">
+	<img id="cropImage" src="{{ imageUrl }}" alt="" />
+</div>
+<p class="croptxt">{{ 'choose_cropping_proportions'|trans }}</p>
+<select class="proportions-select">
+	{% for proportion in available_proportions %}
+	<option value="{{ proportion[1] }}">{{ proportion[0] }}</option>
+	{% endfor %}
+</select>
+<div>
+	<div class="dimensions-container">
+		<p>
+			<input type="checkbox" class="crop-lockdim" name="crop-lockdim" checked="checked" />
+			<label for="crop-lockdim">{{ 'lock_dimensions'|trans }}</label>
+		</p>
+		<p>
+			<input class="crop-width" value="" readonly />
+			px
+		</p>
+		<p>
+			<input class="crop-height" value="" readonly />
+			px
+		</p>
+	</div>
+	<div class="crop-preview"></div>
+	<br class="clear" />
+	<div class="center" style="margin: 25px 0">
+		<button type="button" class="btn-crop-replace">{{ 'save_and_replace'|trans }}</button>
+		<button type="button" class="btn-crop-new">{{ 'save_as_new'|trans }}</button>
+	</div>
+</div>

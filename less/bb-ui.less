@@ -7,6 +7,7 @@ Version: 2.10 Dec2014
 @bootstrap-path: "@{bower-path}bootstrap/less/";
 @font-awesome-path: "@{bower-path}components-font-awesome/";
 @fa-font-path: "/resources/toolbar/bower_components/components-font-awesome/fonts";
+@cropper-path: "../src/tb/component/imagecropper/resources/";
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
@@ -1742,6 +1743,9 @@ Version: 2.10 Dec2014
     }
 
     @import "bb-ui-widget.less";
+
+    /* IMAGE CROPPER */
+    @import (less) "@{cropper-path}cropper.css";
 
     /*LAYOUT PANE*/
     .bb5-windowpane-wrapper {

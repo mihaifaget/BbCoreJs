@@ -20,10 +20,11 @@
 
 define(
     [
+        'Core',
         'jquery',
         'jsclass'
     ],
-    function (jQuery) {
+    function (Core, jQuery) {
 
         'use strict';
 
@@ -49,7 +50,18 @@ define(
                             'default_thumbnail': parent.data.image
                         }
                     },
-                    extra = parent.definition.defaultOptions[object.name].extra;
+                    extra = parent.definition.defaultOptions[object.name].extra,
+                    croppable_elements = Core.config('croppable_elements');
+
+                if (croppable_elements.elements.indexOf(object.type) !== -1) {
+                    config.additionalButtons = {
+                        cropButton: {
+                            text: 'crop_image',
+                            type: 'button',
+                            class: 'btn btn-default-grey btn-crop'
+                        }
+                    };
+                }
 
                 if (extra) {
                     if (extra.dropzone) {

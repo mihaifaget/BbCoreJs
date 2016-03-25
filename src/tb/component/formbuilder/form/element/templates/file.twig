@@ -1,4 +1,8 @@
 <div class="dropzone-area">
+	{% if element.config.additionalButtons.cropButton %}
+        {% set cropButton = element.config.additionalButtons.cropButton %}
+        <button type="{{ cropButton.type }}" class="{{ cropButton.class }}">{{ cropButton.text|trans|upper }}</button>
+    {% endif %}
     <label for="{{ element.getKey() }}" class="label">{{ element.getLabel() }}</label>
     <div class="dropzone dropzone-file">
     </div>

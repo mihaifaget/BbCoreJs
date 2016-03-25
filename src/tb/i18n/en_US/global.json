@@ -12,11 +12,12 @@
     "activated": "Activated",
     "activate_deactivate": "Activate / Deactivate",
     "add_a_contenttype": "Add a content type",
-    "add_content": "Add content",
-    "add_link": "Add a link",
     "add_and_close": "Add and Close",
-    "add_media": "Add media",
+    "add_content": "Add content",
+    "add_image_first": "You must add an image first",
     "add_item_plus_plugin": "Add a new item to this container",
+    "add_link": "Add a link",
+    "add_media": "Add media",
     "after": "After",
     "all": "All",
     "all_layouts": "All layouts",
@@ -49,6 +50,7 @@
     "change_password": "Change password",
     "changed_to": "Changed to",
     "choose_an_action": "Choose an action",
+    "choose_cropping_proportions": "Choose cropping proportions",
     "clear_all": "Clear all",
     "clear_filters": "Clear filters",
     "clone_page": "Clone page",
@@ -82,6 +84,8 @@
     "created_before": "Created before",
     "created_after": "Created after",
     "creation_date": "Creation date",
+    "crop_image": "Crop image",
+    "custom": "Custom",
     "cut": "Cut",
     "current_directory": "Current directory",
     "content_preview": "Content preview",
@@ -141,9 +145,11 @@
     "has_been_deleted": "has been deleted",
 
     "if_you_wish_to_keep_these_subpages_please_move_them_to_another_location": "If you wish to keep these subpages please move them to another location",
+    "image_was_cropped": "Image was successfully cropped",
     "import": "Import",
     "inactive": "Inactive",
     "internal_link": "Internal link",
+    "invalid_element": "Invalid element",
 
     "keywords_editor": "Keywords",
     "keyword_already_exists" : "This keyword already exists",
@@ -161,6 +167,7 @@
     "loading_pages": "Loading pages...",
     "loading_sites": "Loading sites...",
     "loading_users": "Loading users...",
+    "lock_dimensions": "Lock dimensions",
     "login": "Login",
     "log_in": "Log in",
     "log_out": "Log out",
@@ -187,6 +194,7 @@
 
     "name": "Name",
     "name_is_required": "Name is required",
+    "new_cropimage_created": "Image was cropped and saved to media library",
     "new_page": "New page",
     "new_page_final_message": "The current page does not accept children. The page will be created at the same level",
     "next": "Next",
@@ -196,6 +204,7 @@
     "no_content_cancel": "No content to cancel",
     "no_content_validate": "No content to publish online",
     "no_description_provided": "No description provided",
+    "no_image_to_crop": "There is no image available to crop",
     "no_page_modification_cancel": "No page modification to cancel",
     "no_page_modification_validate": "No page modification to validate",
     "no_one": "None",
@@ -263,7 +272,10 @@
     "roles_management": "Roles management",
 
     "save": "Save",
+    "save_and_replace": "Save and replace",
     "save_as_draft": "Save as draft",
+    "save_as_new": "Save as new",
+    "save_image_first": "Save the new image first",
     "save_in_media_library": "Save this image in the media library",
     "save_draft": "Save draft",
     "save_status": "Save status",
@@ -286,6 +298,7 @@
     "show_folder": "Show folders only",
     "some_actions_are_not_allowed_for_root_page": "Some actions are not allowed for root page.",
     "split_content": "Split this content",
+    "square": "Square",
     "state-0": "Offline",
     "state-1": "Online",
     "state-2": "Non available from menus",
@@ -344,4 +357,5 @@
     "wrong_upload_file_types": "You can't upload files of this type",
 
     "yes": "Yes"
+
 }

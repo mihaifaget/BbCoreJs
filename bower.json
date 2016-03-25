@@ -32,7 +32,8 @@
     "components-font-awesome": "4.2.0",
     "ckeeditor": "git://github.com/ckeditor/ckeditor-releases.git#standard/stable",
     "dropzone": "~4.2.0",
-    "backbee-core-js": "~0.1.*"
+    "backbee-core-js": "~0.1.*",
+    "cropper": "~2.3.0"
   },
   "devDependencies": {
     "uri.js": "~1.14.1",
