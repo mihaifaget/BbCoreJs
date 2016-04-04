@@ -201,6 +201,7 @@
     "no_result": "Aucun résultat",
     "no_user_found": "Auncun utilisateur trouvé",
 
+    "offline_article_alert": "Vous venez de sélectionner un contenu lié à une page hors ligne. Mettez cette page en ligne pour que les utilisateurs puisse voir ce contenu",
     "online": "En ligne",
     "only_picture_allowed": "Seule une image peut être insérée ici",
     "orphaned_content": "Contenu orphelin",

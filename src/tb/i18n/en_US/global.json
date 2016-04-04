@@ -202,6 +202,7 @@
     "no_result": "No result",
     "no_user_found": "No user found",
 
+    "offline_article_alert": "You just selected a content linked to an offline page. Please put this page online if you want users to see this content",
     "online": "Online",
     "only_picture_allowed": "Only picture allowed here",
     "orphaned_content": "Orphaned content",

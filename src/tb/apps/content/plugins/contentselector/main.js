@@ -6,6 +6,8 @@ define(
         'component!translator',
         'jquery',
         'content.manager',
+        'content.repository',
+        'component!popin',
         'jsclass'
     ],
     function (
@@ -14,7 +16,9 @@ define(
         ContentSelector,
         Translator,
         jQuery,
-        ContentManager
+        ContentManager,
+        ContentRepository,
+        PopInManager
     ) {
         'use strict';
 
@@ -30,6 +34,7 @@ define(
                 var contentInfos,
                     position,
                     content,
+                    offlineArticlePopin,
                     self = this;
                 if (!selections.length) {
                     return;
@@ -40,7 +45,17 @@ define(
                         content = ContentManager.buildElement(contentInfos);
                         position = self.getConfig("appendPosition");
                         position = (position === "bottom") ? "last" : 0;
-                        self.getCurrentContent().append(content, position);
+                        self.getCurrentContent().append(content, position).done(function () {
+                            if (content.type === 'Article/Article') {
+                                ContentRepository.findData('Article/Article', content.uid).done(function (article) {
+                                    if (article.is_mainnode_online === false) {
+                                        offlineArticlePopin = PopInManager.createPopIn();
+                                        offlineArticlePopin.setContent(Translator.translate('offline_article_alert'));
+                                        offlineArticlePopin.display();
+                                    }
+                                });
+                            }
+                        });
                     } catch (e) {
                         Core.exception('ContentSelectorPluginException', 50000, e);
                     }
